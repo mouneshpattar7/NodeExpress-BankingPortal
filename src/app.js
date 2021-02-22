@@ -26,6 +26,8 @@ app.get('/checking', (req, res) => res.render('account', { account: accounts.che
 app.get('/credit', (req, res) => res.render('account', { account: accounts.credit }));
 
 
+app.get('/transfer', (req, res) =>  res.render('transfer'));
+
 
 app.post('/transfer', (req, res) => {
     accounts[req.body.from].balance -= req.body.amount;
